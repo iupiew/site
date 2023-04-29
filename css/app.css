@@ -1,0 +1,116 @@
+/* THIS IS A MESS DELETE THIS */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: x-large;
+}
+
+body {
+    background: linear-gradient(#32290b, #2f0715, #061c24, #0a2720);
+    color: rgb(231, 231, 231);
+    margin: 0px auto 0px auto;
+    width: 70%;
+    min-height: 600px; 
+}
+
+#title {
+    padding-left: 10px;
+    color: rgb(192, 192, 192);
+}
+
+div#header {
+    
+    margin-bottom: 10px;
+    min-height: 64px;
+}
+
+#lemo {
+    padding-top: 8px;
+    float: left;
+    padding-left: 20px;
+}
+
+div#header #navigation {
+    padding-top: 18px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+div#header #navigation a {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(192, 192, 192);
+    font-weight: bold;
+    margin-left: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+div#header #navigation a:hover {
+    color: #ffc5fe;
+}
+
+div#footer {
+    font-family: 'Orbitron', sans-serif;
+    min-height: 90px;
+    color: rgb(192, 192, 192);
+    font-size: 14px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+div#footer a {
+    color: rgb(192, 192, 192);
+    text-decoration: none;
+}
+
+div#footer a:hover {
+    color: #ffc5fe;
+}
+
+
+li a {
+    color: rgb(192, 192, 192);
+    text-decoration: none;
+}
+li a:hover {
+    color: #ffc5fe;
+}
+p a{
+    color: rgb(192, 192, 192);
+    text-decoration: none;
+}
+p a:hover {
+    color: #ffc5fe;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+div.info {
+    min-height: 20px;
+    color: #acacac;
+    font-size: 14px;
+    font-style: italic;
+}
+
+#content-wrapper {
+    min-height: 500px;
+    border: solid 1.5px #eee8aa;
+    border-radius: 15px;
+}   
+
+#content {
+    margin: 30px;
+    max-width: 500px;
+}
+
+._header {
+    font-size: small;
+}
