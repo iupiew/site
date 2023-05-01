@@ -2,11 +2,11 @@
 title: Contact
 ---
 
-
 ### eoaaou at gmail dot com
 
-https://eoaaou.github.io
-
-https://t.me/pumpking
+<a href="https://eoaaou.github.io">Github</a>
+● <a href="https://eoaaou.github.io">Linkedin</a>
+● <a href="https://t.me/pumpking">Telegram</a>
+ 
 
 

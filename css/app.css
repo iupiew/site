@@ -1,88 +1,99 @@
-/* THIS IS A MESS DELETE THIS */
-
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+  } 
+
 html {
-  font-family: 'Roboto', sans-serif;
-  font-size: x-large;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(#373737, #606060, #858484, #a3a3a3);
+    min-height: 700px;
 }
 
 body {
-    background: linear-gradient(#32290b, #2f0715, #061c24, #0a2720);
-    color: rgb(231, 231, 231);
+    font-size: large;
+    color: rgb(255, 255, 255);
+    margin: 5px;
+}
+
+header {
+    display: block;
+    height: 10%;
     margin: 0px auto 0px auto;
+}
+
+#nv-wrap{
+    padding-top: 10px;
+    height: 100%;
     width: 70%;
-    min-height: 600px; 
+    margin: 0px auto 0px auto;
 }
 
-#title {
-    padding-left: 10px;
-    color: rgb(192, 192, 192);
-}
-
-div#header {
-    
-    margin-bottom: 10px;
-    min-height: 64px;
-}
-
-#lemo {
-    padding-top: 8px;
-    float: left;
-    padding-left: 20px;
-}
-
-div#header #navigation {
-    padding-top: 18px;
+#nv {
+    padding-bottom: 10px;
     text-align: right;
     padding-right: 20px;
+    transition: 1s;
 }
 
-div#header #navigation a {
+#nv a {
     font-family: 'Orbitron', sans-serif;
     color: rgb(192, 192, 192);
     font-weight: bold;
     margin-left: 12px;
     text-decoration: none;
     text-transform: uppercase;
+    transition: 1s;
 }
 
-div#header #navigation a:hover {
+#nv a:hover {
     color: #ffc5fe;
 }
 
-div#footer {
-    font-family: 'Orbitron', sans-serif;
-    min-height: 90px;
-    color: rgb(192, 192, 192);
-    font-size: 14px;
-    padding-right: 20px;
-    text-align: center;
+#cnt-wrap {
+    display: block; 
+    height: 100%;
+    margin: 0px auto 0px auto; 
 }
 
-div#footer a {
-    color: rgb(192, 192, 192);
-    text-decoration: none;
+#cnt-box {
+    margin: auto;
+    min-height: 500px;
+    border-radius: 20px;
+    width: 70%;
+    
+    animation: colorchange 10s; 
+    animation-timing-function: ease-in-out; 
+    animation-iteration-count: infinite; 
+    animation-play-state: running;
 }
 
-div#footer a:hover {
-    color: #ffc5fe;
+#cnt {
+    margin: 30px;  
 }
-
 
 li a {
     color: rgb(192, 192, 192);
     text-decoration: none;
+    transition: 1s;
 }
+
 li a:hover {
     color: #ffc5fe;
+    transition: 1s;
 }
+
 p a{
     color: rgb(192, 192, 192);
     text-decoration: none;
+    transition: 1s;
 }
+
 p a:hover {
     color: #ffc5fe;
+    transition: 1s;
 }
 
 h1 {
@@ -93,24 +104,83 @@ h2 {
     font-size: 20px;
 }
 
-div.info {
-    min-height: 20px;
+
+#ft-wrap {
+    height: 100%;
+    width: 70%;
+    margin: 0px auto 0px auto;  
+}
+
+
+footer {
+    display: block;
+    height: 50px; 
+    margin: 0px auto 0px auto;
+    text-align: right;
+    padding-right: 20px; 
+}
+
+footer p {
+    font-size: x-small;
+}
+
+#outro {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    font-size: x-small;
+    text-decoration: none;
     color: #acacac;
-    font-size: 14px;
-    font-style: italic;
 }
 
-#content-wrapper {
-    min-height: 500px;
-    border: solid 1.5px #eee8aa;
-    border-radius: 15px;
-}   
-
-#content {
-    margin: 30px;
-    max-width: 500px;
+/* Tablet */
+@media screen and (min-width: 501px) and (max-width: 799px) {
+    body {
+        font-size: medium;
+    }
+    #nv-wrap{
+        width: 100%;
+    }
+    #nv {
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    #nv a {
+        font-size: large;     
+    }
+    #cnt-box {
+        padding: auto;
+    }
+} 
+/* Mobile */
+@media screen and (min-width: 320px) and (max-width: 667px) {
+    body {
+        font-size: medium;
+    }
+    #nv-wrap{
+        width: 100%;
+    }
+    #nv {
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    #nv a {
+        font-size: medium;
+        transition: 1s;
+        
+    }
+    #cnt-box {
+        width: 95%;
+        min-height: 500px;
+    }
 }
 
-._header {
-    font-size: small;
+@keyframes colorchange { 
+    0% { border: solid 1px #d9ff00ce; } 
+    14% { border: solid 1px #ffa600c9; } 
+    28% { border: solid 1px #ffff00c2; } 
+    42% { border: solid 1px #00ffb7e7; } 
+    56% { border: solid 1px #ff00ffc2; }
+    70% { border: solid 1px #9500ffa8; } 
+    84% { border: solid 1px #ff5100b5; } 
+    100% { border: solid 1px #d9ff00ce; }
 }

@@ -5,19 +5,12 @@
 
 packages:
 - completed:
-    hackage: hjsmin-0.2.0.1@sha256:89a0d348d8a578096dbfe3e4bda571d2b3b49b635d5d6bdf6aacfac7fc5ccf2e,1602
+    hackage: hakyll-4.15.1.1@sha256:707990cc15bcc9637519dbb3382dfa790f20191a86e988dab2824f5f6bc7ed87,9962
     pantry-tree:
-      sha256: 073869c6ac861c1d8c9ef414e94f0d907719c99d71cc5c9c0b91772868f0e034
-      size: 413
+      sha256: f61b63725d954d7feea4dc0697771a112c89018c7295c8ee5858f72fcdd384f6
+      size: 8861
   original:
-    hackage: hjsmin-0.2.0.1
-- completed:
-    hackage: language-javascript-0.6.0.4@sha256:a90570240ae6120924d52c1cddd0df6bd5bfb351f43ba0c9cc75c05db86fa3c3,3707
-    pantry-tree:
-      sha256: cd9004ee722febdb0af9aa21385c15ab09522b21915931783832b6dff39d6a2f
-      size: 2198
-  original:
-    hackage: language-javascript-0.6.0.4
+    hackage: hakyll-4.15.1.1
 snapshots:
 - completed:
     sha256: 9fa4bece7acfac1fc7930c5d6e24606004b09e80aa0e52e9f68b148201008db9
