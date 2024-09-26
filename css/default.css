@@ -81,43 +81,16 @@ button {
 }
 
 .grid-item-container {
- background-color: currentColor;
   border-radius: 12px;
-  padding: 10px
+  padding: 10px;
 }
 
 .grid-item {
   background-color: slategray;
   border-radius: 10px;
   text-align: center;
-  padding: 10px
+  padding: 10px;
 }
-
-/* #item1 { */
-/*   grid-column-start: 1; */
-/*   grid-column-end: 2; */
-/*   grid-raw-start: 1; */
-/*   grid-raw-end: 2; */
-/**/
-/* } */
-/**/
-/* #item2 { */
-/*   grid-column-start: 2; */
-/*   grid-column-end: 1; */
-/*   grid-column-start: 1; */
-/*   grid-column-end: 2; */
-/**/
-/* } */
-/**/
-/* #item3 { */
-/*   grid-column-start: 1; */
-/*   grid-column-end: 2; */
-/* } */
-/**/
-/* #item4 { */
-/*   grid-column-start: 1; */
-/*   grid-column-end: 2; */
-/* } */
 
 footer {
   margin-top: 3rem;
