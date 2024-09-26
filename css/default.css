@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 html {
   font-size: 64.5%;
 }
@@ -5,14 +7,23 @@ html {
 body {
   font-family: "Fira Mono", monospace;
   font-size: 1.6rem;
-  color: #cccccc;
-  background: #222222;
 }
+
+/* Dark theme styles */
+body[data-theme="dark"] {
+    background-color: #282828;
+    color: #eeeeee;
+}
+
+/* Light theme styles */
+body[data-theme="light"] {
+    background-color: #eeeeee;
+    color: #282828;
+}
+
 
 body a {
   color: slategray;
-  transition: .2s;
-
 }
 
 body a:hover {
@@ -20,23 +31,107 @@ body a:hover {
   transition: .2s;
 }
 
-nav {
-  padding-top: 0.6em;
-  text-align: right;
+header * {
+    display: flex;
+}
 
+header {
+  height: 50px;
+  border-bottom: solid .1px currentColor;
+}
+
+nav {
+  padding-top: 1em;
+  float: right;
+  gap: 1em;
 }
 
 nav a {
-  font-size: 1.8rem;
-  color: #cccccc;
+  color: currentColor;
+  font-size: 1.3em;
   text-decoration: none;
- }
+}
+
+button {
+  padding-left: 1em;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: none;
+  color: currentColor;
+}
+
+#social {
+  text-align: center;
+}
+
+.icon {
+      font-size: 40px; /* Set desired size */
+      color: currentColor; /* Set desired color */
+      transition: transform 0.2s;
+      text-decoration: none; /* Remove underline */
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px 20px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.grid-item-container {
+ background-color: currentColor;
+  border-radius: 12px;
+  padding: 10px
+}
+
+.grid-item {
+  background-color: slategray;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px
+}
+
+/* #item1 { */
+/*   grid-column-start: 1; */
+/*   grid-column-end: 2; */
+/*   grid-raw-start: 1; */
+/*   grid-raw-end: 2; */
+/**/
+/* } */
+/**/
+/* #item2 { */
+/*   grid-column-start: 2; */
+/*   grid-column-end: 1; */
+/*   grid-column-start: 1; */
+/*   grid-column-end: 2; */
+/**/
+/* } */
+/**/
+/* #item3 { */
+/*   grid-column-start: 1; */
+/*   grid-column-end: 2; */
+/* } */
+/**/
+/* #item4 { */
+/*   grid-column-start: 1; */
+/*   grid-column-end: 2; */
+/* } */
 
 footer {
   margin-top: 3rem;
   padding: 1.2rem 0;
   font-size: 1.2rem;
-  color: #cccccc;
+  text-align: center;
+}
+
+footer a {
+  font-size: 1.3em !important;
+}
+
+footer a:hover {
+  color: currentColor;
 }
 
 h1 {

@@ -3,7 +3,6 @@
 import           Data.Monoid (mappend)
 import           Hakyll
 
-
 --------------------------------------------------------------------------------
 config :: Configuration
 config = defaultConfiguration
@@ -16,15 +15,30 @@ main = hakyllWith config $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "assets/*" $ do
+        route idRoute
+        compile copyFileCompiler       
+
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
+
+    match "js/*" $ do
+        route idRoute
+        compile copyFileCompiler  -- Add this line
 
     match "about.md" $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
+
+    match "cv.md" $ do
+        route   $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
+        
     
     match "contact.md" $ do
         route   $ setExtension "html"
@@ -57,6 +71,8 @@ main = hakyllWith config $ do
     match "index.html" $ do
         route idRoute
         compile $ do
+
+            let indexCtx = defaultContext `mappend` constField "theme" "light" -- or "dark"
             posts <- recentFirst =<< loadAll "posts/*"
             let indexCtx =
                     listField "posts" postCtx (return posts) `mappend`
@@ -68,6 +84,8 @@ main = hakyllWith config $ do
                 >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
+
+
 
 
 --------------------------------------------------------------------------------
