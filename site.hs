@@ -11,6 +11,7 @@ config = defaultConfiguration
 
 main :: IO ()
 main = hakyllWith config $ do
+
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -72,7 +73,6 @@ main = hakyllWith config $ do
         route idRoute
         compile $ do
 
-            let indexCtx = defaultContext `mappend` constField "theme" "light" -- or "dark"
             posts <- recentFirst =<< loadAll "posts/*"
             let indexCtx =
                     listField "posts" postCtx (return posts) `mappend`
