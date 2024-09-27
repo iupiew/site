@@ -1,5 +1,5 @@
 # Vasiliy Ovchinnikov
-#### vasiliy [dot] ovchinnikov [at] proton [dot] me
+<!-- #### vasiliy [dot] ovchinnikov [at] proton [dot] me -->
 Software Engineer with experience in Robotics, Image Processing and Computer Vision. Highly
 skilled in various programming languages like Python, Javascript, Rust.
 
@@ -12,21 +12,21 @@ skilled in various programming languages like Python, Javascript, Rust.
  <strong>Tools:</strong> Git, Github, Gitlab, Kubernetes, Docker, AWS, Netlify<br>
 
 ## Employment:
-#### Full Stack Developer <strong style="float: right;">2024 - now</strong><br>
-
+### Full Stack Developer <strong class="cv-date" style="float: right;">2024 - now</strong><br>
 – API development, specifically for web3 use. <br>
 – DApps development. Writing and testing smart-contracts for the Solana ecosystem.<br>
 
-<strong>Core Technologies:</strong> Rust, Aiken, Preact, Deno
+<strong>Core Technologies:</strong> Rust, Aiken, Preact, Deno<br>
 
-#### Frontend Developer at Ticketplace LLC  <strong style="float: right;">2022 - 2023</strong><br>
+
+### Frontend Developer at Ticketplace LLC  <strong class="cv-date" style="float: right;">2022 - 2023</strong><br>
 
 – Development and refactoring of Vue components for an existing Laravel project.<br>
 – Migrating an existing Vue app to Android using Capacitor.js.<br>
 
 <strong>Core Technologies:</strong> NodeJS, VueJS, Laravel, Docker, Postgres, Android Studio
 
-#### Python Developer at KeySoft LLC    <strong style="float: right;">2020 - 2022</strong><br>
+### Python Developer at KeySoft LLC    <strong class="cv-date" style="float: right;">2020 - 2022</strong><br>
 
 – Development of a robot control system using computer vision.<br>
 – Writing various types of controllers for different robotic models.<br>
@@ -34,14 +34,14 @@ skilled in various programming languages like Python, Javascript, Rust.
 
 <strong>Core Technologies:</strong> Python, C++, Webots, OpenCV
 
-#### Python Developer   <strong style="float: right;">2019 - 2020</strong><br>
+### Python Developer   <strong class="cv-date" style="float: right;">2019 - 2020</strong><br>
 
 – Web crawler development and data extraction from existing websites.<br>
 
 Core Technologies: Python, Pandas, Selenium
 
 ## Education:
-National Research University "MPEI", Moscow <strong style="float: right;">2015 - 2019</strong><br>
+National Research University "MPEI", Moscow <strong class="cv-date" style="float: right;">2015 - 2019</strong><br>
 
 <strong>Core Technologies:</strong> FPGA, Xilinx, Matlab, Assembly language, Autocad
 

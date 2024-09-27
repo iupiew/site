@@ -1,8 +1,8 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
+import           Data.Monoid        (mappend)
 import           Hakyll
-
+import           Hakyll.Web.Sass    (sassCompiler)
 --------------------------------------------------------------------------------
 config :: Configuration
 config = defaultConfiguration
@@ -20,9 +20,15 @@ main = hakyllWith config $ do
         route idRoute
         compile copyFileCompiler       
 
-    match "css/*" $ do
-        route   idRoute
-        compile compressCssCompiler
+    -- match "css/*" $ do
+    --     route   idRoute
+    --     compile compressCssCompiler
+
+
+    match "css/*.sass" $ do
+        route $ setExtension "css"
+        let compressCssItem = fmap compressCss
+        compile (compressCssItem <$> sassCompiler)
 
     match "js/*" $ do
         route idRoute
@@ -79,7 +85,6 @@ main = hakyllWith config $ do
                 >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
-
 
 
 

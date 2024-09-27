@@ -1,0 +1,170 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap')
+
+$pr: slategray
+$sd: lightgray
+$bg-dark: #1a1a1a
+$bg-light: #eaeaea
+$tx-dark: #cdcdcd
+$tx-light: #1a1a1a
+$pg: slategray // Add your primary link color
+
+html
+  font-size: 64.5%
+  ::-moz-selection
+    color: #170328
+    background: #74929f
+  ::selection
+    color: #170328
+    background: #bef286
+
+body
+    font-family: "Fira Mono", monospace
+    font-size: 1.6rem
+    background-color: $bg-light
+    color: $tx-light
+
+    a
+        color: $pg
+
+        &:hover
+            color: darken($pg, 10%) // Use a darker shade on hover
+            transition: .2s
+
+    header
+        *
+            display: flex
+
+        height: 50px
+        padding-bottom: 2em
+
+    nav
+        padding-top: 2em
+        float: right
+        gap: 2em
+
+        a
+            color: currentColor
+            font-size: 1.3em
+            text-decoration: none
+
+    button
+        padding-left: 1em
+        cursor: pointer
+        outline: none
+        background: none
+        border: none
+        color: currentColor
+
+    #social
+        text-align: center
+        padding-top: 1em
+
+    .icon
+        font-size: 40px
+        color: currentColor
+        transition: transform 0.2s
+        text-decoration: none
+
+    #projects
+        
+        display: grid
+        grid-template-columns: 49% 49%
+        gap: 4% 2%
+        margin-top: 2em
+        margin-bottom: 2em
+
+        .grid-item-container
+            // border-radius: 10px
+            // background: rgb(126, 105, 135)
+            // background: linear-gradient(90deg, rgba(126, 105, 135, 1) 0%, rgba(66, 99, 142, 1) 49%, rgba(70, 140, 131, 1) 100%)
+            padding: 2px
+
+            .grid-item
+                padding-left: 10px  
+                padding-right: 10px  
+                border-radius: 8px
+                text-align: center
+
+    footer
+        h1
+            margin-top: 2em
+            text-align: center
+            
+            text-shadow: 0 0 3px currentColor;
+
+    h1
+        font-size: 2.4rem
+
+    h2
+        font-size: 2rem
+
+    li a
+        color: slategray
+
+    article .header
+        font-size: 1.4rem
+        font-style: italic
+        color: #555
+
+    .logo
+        a
+            padding-top: 0.6em
+            color: #aed168
+            text-decoration: none
+
+// Dark theme styles
+body[data-theme="dark"]
+    background-color: $bg-dark
+    color: $tx-dark
+
+@media (max-width: 319px)
+    body
+        width: 90%
+        margin: 0
+        padding: 0 5%
+
+    footer
+        text-align: center
+
+    .logo
+        text-align: center
+        margin: 1rem auto 3rem
+
+        a
+            font-size: 2.4rem
+
+@media (min-width: 320px)
+    body
+        width: 90%
+        margin: 0
+        padding: 0 5%
+        
+        // font-size: 1.4em        
+    footer
+        text-align: center
+
+    .logo
+        text-align: center
+        margin: 1rem auto 3rem
+
+        a
+            font-size: 2.4rem
+
+@media (min-width: 800px)
+    body
+        width: 70rem
+        margin: 0 auto
+        padding: 0
+
+    footer
+        text-align: right
+
+    .logo
+        margin: 0
+        text-align: left
+
+        a
+            float: left
+            font-size: 1.8rem
+

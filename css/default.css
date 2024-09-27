@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --pr: slategray; /* Default light mode text */
-    --sd: lightgray; /* Default light mode text */
+    --pr: slategray;
+    --sd: lightgray;
 }
 
 body[data-theme="dark"] {
