@@ -1,15 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
-:root {
-    body[data-theme="dark"] {
-        --bg: #1a1a1a;
-        --tx: #cdcdcd;
-    }
 
-    body[data-theme="light"] {
-        --bg: #eaeaea;
-        --tx: #1a1a1a;
+:root {
+    --bg: #eaeaea; /* Default light mode background */
+    --tx: #1a1a1a; /* Default light mode text */
+}
+
+body[data-theme="dark"] {
+    --bg: #1a1a1a;
+    --tx: #cdcdcd;
+}
+
+body[data-theme="light"] {
+    --bg: #eaeaea;
+    --tx: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--bg);
+        color: var(--tx);
     }
 }
 
