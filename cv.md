@@ -1,53 +1,93 @@
+---
+layout: cv
+title: Vasiliy Ovchinnikov
+---
+
 # Vasiliy Ovchinnikov
-<!-- #### vasiliy [dot] ovchinnikov [at] proton [dot] me -->
-Software Engineer with experience in Robotics, Image Processing and Computer Vision. Highly
-skilled in various programming languages like Python, Javascript, Rust.
+## Web engineer
+
+Software Engineer with experience in robotics, image/text processing and computer vision.
+Skilled in various programming languages like Python, Javascript, Rust and more.
+
+---
 
 ## Technical Skills:
 
- <strong>Blockchain:</strong> EVM, Solana, Cardano<br>
- <strong>Frontend:</strong> HTML, CSS, React, Next.js, Vue, Nuxt.js, Svelte, Sveltekit, SASS, Tailwind<br>
- <strong>Backend:</strong> Nginx, Node.js, SQL, NoSQL, FastAPI<br>
- <strong>Languages:</strong> JS/TS, Python, Rust, Solidity<br>
- <strong>Tools:</strong> Git, Github, Gitlab, Kubernetes, Docker, AWS, Netlify<br>
+ Frontend:<strong> HTML, CSS, React, Next.js, Vue, Nuxt.js, Svelte, Sveltekit, SASS, Tailwind </strong><br>
+ Backend: <strong>Nginx, Node.js, Actix, SQL, NoSQL </strong><br>
+ Languages: <strong>Javascript, Typescript, Python, Rust </strong><br>
+ Tools: <strong> Git, Github, Gitlab, Kubernetes, Docker, AWS, Netlify </strong><br>
+ OS: <strong> Linux, MacOS </strong><br>
+
+---
 
 ## Employment:
-### Full Stack Developer <strong class="cv-date" style="float: right;">2024 - now</strong><br>
-– API development, specifically for web3 use. <br>
-– DApps development. Writing and testing smart-contracts for the Solana ecosystem.<br>
-
-<strong>Core Technologies:</strong> Rust, Aiken, Preact, Deno<br>
 
 
-### Frontend Developer at Ticketplace LLC  <strong class="cv-date" style="float: right;">2022 - 2023</strong><br>
 
-– Development and refactoring of Vue components for an existing Laravel project.<br>
+### Full Stack Developer
+
+<div class="cv-date" style="padding-top: 5px;"><strong>May 2023 - Present</strong></div>
+
+– Implementation of various features in different code bases.<br>
+– Frontend development using various frameworks like Sveltekit, Nuxt.js, Next.js.<br>
+– Backend development with Node.js and Python.<br>
+
+Core Technologies: <strong> Node.js, Python, Supabase, PostgreSQL</strong>
+
+
+### Frontend Developer at Ticketplace LLC 
+
+<div class="cv-date" style="padding-top: 5px;"><strong>Oct 2022 - Jan 2023</strong></div>
+
+– Frontend development with Vue for an existing Laravel project.<br>
+– Implementation of an app interface in Javascript using fabric.js<br>
 – Migrating an existing Vue app to Android using Capacitor.js.<br>
+– Bug fixes on various features<br>
 
-<strong>Core Technologies:</strong> NodeJS, VueJS, Laravel, Docker, Postgres, Android Studio
+Core Technologies: <strong> Vue.js, Laravel, Docker, PostgreSQL, Asana </strong>
 
-### Python Developer at KeySoft LLC    <strong class="cv-date" style="float: right;">2020 - 2022</strong><br>
 
-– Development of a robot control system using computer vision.<br>
-– Writing various types of controllers for different robotic models.<br>
-– Import of 3D models and development of dynamic 3D models for LEGO-like constructors.<br>
+### Python Developer at KeySoft LLC  
 
-<strong>Core Technologies:</strong> Python, C++, Webots, OpenCV
+<div class="cv-date" style="padding-top: 5px;"><strong>Sep 2020 - May 2022</strong></div>
 
-### Python Developer   <strong class="cv-date" style="float: right;">2019 - 2020</strong><br>
+– Development of a programmable LEGO-like constructor<br>
+– Implementation and testing of a robot control system in Python.<br>
+– Integration of an object recognition feature into camera block using OpenCV<br>
+– Programming various types of controllers with NumPy and Matplotlib.<br>
+– Import of 3D models and textures.<br>
+
+Core Technologies: <strong> Python, C++, Webots, OpenCV, Redmine </strong>
+
+
+### Python Developer
+
+<div class="cv-date" style="padding-top: 5px;"><strong>Sep 2020 - May 2022</strong></div>
 
 – Web crawler development and data extraction from existing websites.<br>
+– Game development with Pygame.<br>
 
-Core Technologies: Python, Pandas, Selenium
+Core Technologies: <strong>Python, Selenium, BS4, Pygame</strong>
+
+---
 
 ## Education:
-National Research University "MPEI", Moscow <strong class="cv-date" style="float: right;">2015 - 2019</strong><br>
 
-<strong>Core Technologies:</strong> FPGA, Xilinx, Matlab, Assembly language, Autocad
 
+### NRU "MPEI", Moscow
+
+<div class="cv-date" style="padding-top: 5px;"><strong>Sep 2015 - June 2019</strong></div>
+
+Core Technologies:<strong> FPGA, Xilinx, ASM, Matlab, Autocad </strong>
+
+---
 
 ## Certifications:
-Coursera “Rust Fundamentals” 2024
+Coursera <strong>“Rust Fundamentals”, 2024</strong>
+
+---
 
 ## Languages:
 English, Russian
+

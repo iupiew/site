@@ -42,12 +42,12 @@ main = hakyllWith config $ do
             >>= relativizeUrls
         
     
-    match "contact.md" $ do
-        route   $ setExtension "html"
-        compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
-            >>= relativizeUrls
-
+    -- match "contact.md" $ do
+    --     route   $ setExtension "html"
+    --     compile $ pandocCompiler
+    --         >>= loadAndApplyTemplate "templates/default.html" defaultContext
+    --         >>= relativizeUrls
+    --
     -- match "posts/*" $ do
     --     route $ setExtension "html"
     --     compile $ pandocCompiler
