@@ -16,7 +16,7 @@ main = hakyllWith config $ do
     --     route   idRoute
     --     compile copyFileCompiler
     --
-    match "assets/*" $ do
+    match "assets/**" $ do
         route idRoute
         compile copyFileCompiler       
 
