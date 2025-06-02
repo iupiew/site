@@ -1,42 +1,78 @@
-    (() => {
-            window.site = {
-                prefTheme: getPrefTheme(),
-                setTheme: (name) => {
-                    document.body.setAttribute('data-theme', name);
-                    localStorage.setItem('prefTheme', name);
-                    //updateButtonIcon(name);
-                },
-            };
-
-            // Get preferred theme from localStorage or system preference
-            function getPrefTheme() {
-                const localPrefTheme = localStorage.getItem('prefTheme');
-                return ['dark', 'light'].includes(localPrefTheme)
-                    ? localPrefTheme
-                    : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+// Theme management module
+(() => {
+    // Theme utility functions
+    const ThemeManager = {
+        // Get preferred theme from localStorage or system preference
+        getPreferredTheme: () => {
+            const storedTheme = localStorage.getItem('prefTheme');
+            if (storedTheme && ['dark', 'light'].includes(storedTheme)) {
+                return storedTheme;
             }
+            return window.matchMedia('(prefers-color-scheme: dark)').matches 
+                ? 'dark' 
+                : 'light';
+        },
 
-            // Set initial theme
-            window.site.setTheme(window.site.prefTheme);
+        // Set theme and save preference
+        setTheme: (theme) => {
+            document.body.setAttribute('data-theme', theme);
+            localStorage.setItem('prefTheme', theme);
+            ThemeManager.updateButtonIcon(theme);
+        },
+
+        // Create SVG elements safely
+        createButtonIcons: () => {
+            const lightIcon = new Image();
+            lightIcon.src = '/assets/light_mode.svg';
+            lightIcon.alt = 'Light Mode';
+            lightIcon.width = 24;
+            lightIcon.height = 24;
+            lightIcon.classList.add('theme-icon');
+
+            const darkIcon = new Image();
+            darkIcon.src = '/assets/dark_mode.svg';
+            darkIcon.alt = 'Dark Mode';
+            darkIcon.width = 24;
+            darkIcon.height = 24;
+            darkIcon.classList.add('theme-icon');
+
+            return { lightIcon, darkIcon };
+        },
+
+        // Update button icon
+        updateButtonIcon: (theme) => {
             const button = document.getElementById('theme-button');
+            if (!button) return;
 
-            // Function to update the button icon based on the current theme
-            const updateButtonIcon = (theme) => {
-                button.innerHTML = theme === 'dark'
-                    ? '<img src="/site/assets/light_mode.svg" alt="Light Mode" width="24" height="24">'
-                    : '<img src="/site/assets/dark_mode.svg" alt="Dark Mode" width="24" height="24">';
-            };
+            button.innerHTML = '';
+            button.appendChild(
+                theme === 'dark' 
+                    ? ThemeManager.icons.lightIcon 
+                    : ThemeManager.icons.darkIcon
+            );
+        },
 
-            // Set the initial button icon
-            updateButtonIcon(window.site.prefTheme);
+        // Initialize theme manager
+        init: () => {
+            ThemeManager.icons = ThemeManager.createButtonIcons();
+            const initialTheme = ThemeManager.getPreferredTheme();
+            ThemeManager.setTheme(initialTheme);
 
-            // Add click event to toggle theme
-            button.addEventListener('click', () => {
-                const currentTheme = window.site.prefTheme;
-                const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                window.site.prefTheme = nextTheme; // Update current theme in the site object
-                updateButtonIcon(nextTheme); // Update the icon immediately
-                window.site.setTheme(nextTheme); // Update the theme
-            });
-        })();
+            const button = document.getElementById('theme-button');
+            if (button) {
+                button.addEventListener('click', () => {
+                    const currentTheme = document.body.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    ThemeManager.setTheme(newTheme);
+                });
+            }
+        }
+    };
+
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', ThemeManager.init);
+
+    // Make available globally if needed
+    window.ThemeManager = ThemeManager;
+})();
 

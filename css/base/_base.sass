@@ -17,6 +17,14 @@ body
   font-size: 1.8rem
   background-color: $bg-light
   color: $tx-light
+  a
+    color: $pg
+    text-decoration: none
+    transition: color 0.2s ease
+    &:hover, &:focus
+      color: lighten($pg, 15%)
+    &:active
+      color: darken($pg, 10%)
 
 footer
   font-family: "Fira Code", sans-serif;

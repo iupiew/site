@@ -1,8 +1,7 @@
 ---
-title: Hello World!
+title: Hello World
 author: Owner
 ---
 
-### Hello world
+Hello world!
 
-Test to render .md file
