@@ -16,6 +16,10 @@ main = hakyllWith config $ do
     --     route   idRoute
     --     compile copyFileCompiler
     --
+    match "robots.txt" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "assets/*" $ do
         route idRoute
         compile copyFileCompiler       
@@ -35,11 +39,11 @@ main = hakyllWith config $ do
         compile copyFileCompiler  -- Add this line
 
 
-    match "cv.md" $ do
-        route   $ setExtension "html"
-        compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
-            >>= relativizeUrls
+    -- match "cv.md" $ do
+    --     route   $ setExtension "html"
+    --     compile $ pandocCompiler
+    --         >>= loadAndApplyTemplate "templates/default.html" defaultContext
+    --         >>= relativizeUrls
         
     
     -- match "contact.md" $ do
@@ -83,6 +87,15 @@ main = hakyllWith config $ do
                 >>= applyAsTemplate indexCtx
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
+
+    create ["sitemap.xml"] $ do
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadAll "posts/*"
+            let sitemapCtx =
+                    listField "posts" postCtx (return posts)
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
 
     match "templates/*" $ compile templateBodyCompiler
 

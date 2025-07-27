@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    $for(posts)$
+    <url>
+        <loc>https://www.vasiliyovchinnikov.com$url$</loc>
+        <lastmod>$date_iso8601$</lastmod>
+    </url>
+    $endfor$
+</urlset>
